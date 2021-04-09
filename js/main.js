@@ -84,7 +84,10 @@ function ini() {
 	const currentLang = getCurrentLang();
 	const currentPageLang = getCurrentPageLang();
 
-	if (currentLang !== currentPageLang) {
+	if (
+		currentLang !== currentPageLang &&
+		(currentLang === "cs" || currentLang === "de") /* TODO: en */
+	) {
 		return switchPage(currentLang);
 	}
 	genLang();
