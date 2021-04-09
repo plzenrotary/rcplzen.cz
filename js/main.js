@@ -4,7 +4,7 @@ function checkLang() {
 		.toLowerCase()
 		.split("_");
 	console.log("LANG", lang, "LOCALE", locale);
-	console.log("LOCALSTORAGE", localStorege.getItem("lang"));
+	console.log("LOCALSTORAGE", localStorage.getItem("lang"));
 }
 
 function goDE() {
