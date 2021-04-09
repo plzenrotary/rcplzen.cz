@@ -41,3 +41,7 @@ a {
 .clear {
 	clear: both;
 }
+
+#lang {
+	text-align: right;
+}
