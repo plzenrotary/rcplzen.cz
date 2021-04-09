@@ -12,8 +12,7 @@ function genLang() {
 	if (elem) {
 		elem.innerHTML = `
       <a href="index.html" alt="Česky"><img src="/img/cz32.png" width="24" alt="Česky" /></a>&nbsp;
-      <a href="index_de.html" alt="Deutsch"><img src="/img/de32.png" width="24" alt="Deutsch" /></a>&nbsp;
-      <a href="index_en.html" alt="English"><img src="/img/en32.png" width="24" alt="English" /></a>
+      &nbsp;<a href="index_de.html" alt="Deutsch"><img src="/img/de32.png" width="24" alt="Deutsch" /></a>
     `;
 	}
 }
@@ -25,3 +24,5 @@ function ini() {
 }
 
 window.onload = ini;
+
+//      &nbsp;<a href="index_en.html" alt="English"><img src="/img/en32.png" width="24" alt="English" /></a>
