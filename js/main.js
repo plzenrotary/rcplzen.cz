@@ -4,6 +4,17 @@ function checkLang() {
 		.toLowerCase()
 		.split("_");
 	console.log("LANG", lang, "LOCALE", locale);
+	console.log("LOCALSTORAGE", localStorege.getItem("lang"));
+}
+
+function goDE() {
+	console.log("DE");
+	localStorage.setItem("lang", "de");
+}
+
+function goCS() {
+	console.log("CS");
+	localStorage.setItem("lang", "cs");
 }
 
 function genLang() {
@@ -11,14 +22,14 @@ function genLang() {
 	console.log("gen");
 	if (elem) {
 		elem.innerHTML = `
-      <a href="index.html" alt="Česky"><img src="/img/cz32.png" width="24" alt="Česky" /></a>
-      <a href="index_de.html" alt="Deutsch"><img src="/img/de32.png" width="24" alt="Deutsch" /></a>
+      <a onclick="goCS()" alt="Česky"><img src="/img/cz32.png" width="24" alt="Česky" /></a>
+      <a onclick="goDE()" alt="Deutsch"><img src="/img/de32.png" width="24" alt="Deutsch" /></a>
     `;
 	}
 }
 
 function ini() {
-	console.log("aaa");
+	console.log("ini");
 	checkLang();
 	genLang();
 }
