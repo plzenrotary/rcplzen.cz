@@ -5,10 +5,9 @@ function getCurrentPageLang() {
 	if (href.indexOf("index_de.html") !== -1) {
 		return "de";
 	}
-	// TODO:
-	// if (href.indexOf("index_en.html") !== -1) {
-	// 	return "en";
-	// }
+	if (href.indexOf("index_en.html") !== -1) {
+		return "en";
+	}
 	return "cs";
 }
 
@@ -30,15 +29,9 @@ function getCurrentLang() {
 
 // changes current page to the specified language
 function switchPage(targetLang) {
-	// TODO:
-	// if (targetLang === "en") {
-	// 	location.href = "index_en.html";
-	// } else if (targetLang === "de") {
-	// 	location.href = "index_de.html";
-	// } else {
-	// 	location.href = "index.html";
-	// }
-	if (targetLang === "de") {
+	if (targetLang === "en") {
+		location.href = "index_en.html";
+	} else if (targetLang === "de") {
 		location.href = "index_de.html";
 	} else {
 		location.href = "index.html";
@@ -70,12 +63,10 @@ function genLang() {
 		elem.innerHTML = `
       <a onclick="goCS()" alt="Česky"><img src="/img/cz32.png" width="24" alt="Česky" /></a>
       <a onclick="goDE()" alt="Deutsch"><img src="/img/de32.png" width="24" alt="Deutsch" /></a>
+			<a onclick="goEN()" alt="English"><img src="/img/en32.png" width="24" alt="English" /></a>
     `;
 	}
 }
-
-// TODO:
-//      <a onclick="goEN()" alt="English"><img src="/img/en32.png" width="24" alt="English" /></a>
 
 function ini() {
 	// console.log("current lang", getCurrentLang());
@@ -86,7 +77,7 @@ function ini() {
 
 	if (
 		currentLang !== currentPageLang &&
-		(currentLang === "cs" || currentLang === "de") /* TODO: en */
+		(currentLang === "cs" || currentLang === "de" || currentLang === "en")
 	) {
 		return switchPage(currentLang);
 	}
